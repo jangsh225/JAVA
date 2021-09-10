@@ -1,0 +1,42 @@
+메서드(method)
+
+* 정의 : 클래스 내의 함수, 클래스 네임과 달리 메서드 네임은 소문자로 시작해도 된다.
+* 메서드 표현식 설명
+      modifier(public, private) (4)returnType(void, int, string, double) nameOfMethod ((3)Parameter List){ <- (1) header
+        //method body <- (2) body
+      }
+(1) header : 리턴타입, 메서드 이름, 매개변수 정보를 표시함
+(2) body{} : 메서드 호출 시 실행하는 영역
+(3) Parameter(매개변수) : 매서드 호출(call)시 제공되는 변수를 매개변수에 대입해서 처리한다
+(4) returnType : return 뒤에 오는 value가 존재하지 않는 경우 , returnType void로 지정한다. 
+                 그렇지 않은 경우 returnType을 설정하고 그와 같은 return 값을 설정해주어야 한다.
+* 유형 
+1) . void nameOfMethod (void){}
+2) . void nameOfMethod (Parameter List){}
+3) . returnType nameOfMethod (void){}
+4) . returnType nameOfMethod (Parameter List){}
+
+* 특징
+1) 호출(call) 방법 : 메서드이름(매개값, ...); 
+2) 변수의 개수를 정하지 않았을 경우, '...' 으로 호출할 수 있다. 단, 같은 type 의 값들만 가능하다. 
+ex. public double sum(int ... a){ 
+    return 0;}
+3) returnType 이 있을 경우 return문을 선언해주어야 한다. (void의 경우 return 없어도 됨)
+4) 같은 패키지 안에서 메서드를 호출할 경우에는 import 할 필요가 없다.
+5) 오버로딩 : 같은 클래스 내에 같은 이름의 메서드를 여러 개 정의할 수 있다. 
+              단, 파라미터 개수가 다르거나 데이터 타입, 순서로 구분이 가능하도록 구현해야한다.
+ex. int plus(int a, int b) {	
+		return a+b;
+	}
+	
+	double plus(int a, double b) {	
+		return a+b;
+	}
+	
+	double plus(double a, int b) {	
+		return a+b;
+	} 
+	
+	double plus(double a, double b) {	
+		return a+b;
+	}
